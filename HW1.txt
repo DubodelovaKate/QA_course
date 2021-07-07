@@ -1,0 +1,45 @@
+1) Посмотреть где я - pwd 
+2) Создать папку - mkdir QAtest
+3) Зайти в папку - cd QAtest
+4) Создать 3 папки - mkdir test_1 test_2 test_3
+5) Зайти в любую папку - cd test_1
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 4.json 5.json
+7) Создать 3 папки - mkdir test11 test22 test33
+8) Вывести список содержимого папки - ls или ls -la (покажет скрытые папки)
+9) + Открыть любой txt файл - vim 1.txt
+10) + написать туда что-нибудь, любой текст - i (пишем текст, потом esc)
+11) + сохранить и выйти - :wq 
+12) Выйти из папки на уровень выше - cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку
+mv /D/KSENDZOV/HW/QAtest/test1/1.txt /D/KSENDZOV/HW/QAtest/test2/1.txt
+mv /D/KSENDZOV/HW/QAtest/test1/2.txt /D/KSENDZOV/HW/QAtest/test2/2.txt
+14)скопировать любые 2 файла, которые вы создали, в любую другую папку --
+cp /D/KSENDZOV/HW/QAtest/test1/3.txt /D/KSENDZOV/HW/QAtest/test2/3.txt  
+cp /D/KSENDZOV/HW/QAtest/test1/4.json /D/KSENDZOV/HW/QAtest/test2/4.json
+или
+mv 1.txt test22/1.txt
+mv 2.txt test22/2.txt
+15) Найти файл по имени - find -name 1.txt  
+16) просмотреть содержимое в реальном времени - cat 1.txt
+17) вывести несколько первых строк из текстового фай - head -3 1.txt
+18) вывести несколько последних строк из текстового файла - tail -3 1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. less 1.txt
+20) вывести дату date +"%T" и время  date +"%d.%m.%Y" (в дате могут быть точки, тире, /, тогда и на дате это оборазится, + с форматом года можно играть, +менять местами даты и месяцы)
+--------------------------------------
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:
+
+vim script.sh
+
+#!/bin/bash
+cd Script
+mkdir test_1 test_2 test_3
+cd test_1
+touch 1.txt 2.txt 3.txt 4.json 5.json
+mkdir test11 test22 test33
+ls -la
+mv 1.txt test22/1.txt
+mv 2.txt test22/2.txt
+выходим из редактирования esc, сохраняем и выходим :wq 
+далее вводим команду chmod +x script.sh 
+потом вводим sh script.sh для отображения операций
