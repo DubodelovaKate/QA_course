@@ -1,0 +1,12 @@
+1. ID
+2. Summary
+3. Actual Result
+4. Expected Result
+5. Steps to reproduce
+6. Reproducibility
+7. Severity
+8. Priority
+9. Symptom
+10. Workaround
+11. Attachments 
+12. OS
